@@ -7,7 +7,7 @@ DIR_PLUGS=$DIR_ROOT/plugins
 DIR_SCRIPT=$DIR_ROOT/scripts
 
 # Basic Configurations
-HISTFILE="$HOME/.zsh_history"
+# HISTFILE="$HOME/.zsh_history"
 
 ## PS1 SHELL THEME
 source $DIR_THEME/theme.zsh-theme
