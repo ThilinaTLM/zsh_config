@@ -1,6 +1,6 @@
 
 ## Directories
-DIR_ROOT=~/dotfiles/shell
+#DIR_ROOT=~/dotfiles/shell
 DIR_ALIAS=$DIR_ROOT/aliases
 DIR_THEME=$DIR_ROOT/themes
 DIR_PLUGS=$DIR_ROOT/plugins
