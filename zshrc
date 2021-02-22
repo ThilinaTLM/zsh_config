@@ -18,6 +18,13 @@ export PATH="/home/tlm/.yarn/bin:$PATH"
 # Git autocomplete
 autoload -Uz compinit && compinit
 
+# Home and End key
+bindkey  "^[[H"   beginning-of-line
+bindkey  "^[[F"   end-of-line
+bindkey  "^[[3~"  delete-char
+
+# Edit command in the editor
+autoload edit-command-line; zle -N edit-command-line
 
 # Setup modules
 for f in $DIR_PLUGS/*.plugin.zsh; do source $f; done
@@ -25,4 +32,4 @@ for f in $DIR_SCRIPT/*.zsh; do source $f; done
 for f in $DIR_ALIAS/*.zsh; do source $f; done
 
 # Startup echo
-$DIR_ROOT/pfetch
+#$DIR_ROOT/pfetch
