@@ -10,6 +10,8 @@ alias gf="git fetch "
 alias grl="git remote -v"
 alias gb="git branch "
 alias gbb="git checkout -b "
-alias gch="git checkout "
+#alias gch="git checkout "
 
-
+function gcc() {
+    git branch -a | fzf | sed 's/[^a-zA-Z0-9/]*//g' | xargs git checkout
+}
