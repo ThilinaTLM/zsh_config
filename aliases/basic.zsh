@@ -4,7 +4,7 @@ alias start="sudo systemctl start "
 alias stop="sudo systemctl stop "
 
 # Alternative Bash Commands
-#alias cat="bat "
+alias cat="bat --plain "
 alias ls="exa "
 
 # ViM
