@@ -13,5 +13,5 @@ alias gbb="git checkout -b "
 #alias gch="git checkout "
 
 function gcc() {
-    git branch -a | fzf | sed 's/[^a-zA-Z0-9/]*//g' | xargs git checkout
+    git branch -a | fzf | sed 's/[^a-zA-Z0-9/]*(remote)*//g' | xargs git checkout
 }

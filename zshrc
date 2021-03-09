@@ -3,7 +3,7 @@
 DIR_ROOT=/home/tlm/dotfiles/shell
 DIR_THEME=$DIR_ROOT/themes
 DIR_PLUGS=$DIR_ROOT/plugins
-DIR_SCRIPT=$DIR_ROOT/scripts
+DIR_SCRIPT=$DIR_ROOT/shcuts
 
 # Basic Configurations
 # HISTFILE="$HOME/.zsh_history"
