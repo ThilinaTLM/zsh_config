@@ -13,12 +13,6 @@ alias stop="sudo systemctl stop "
 alias cat="bat --plain "
 alias ls="exa "
 
-alias sshutdown="/usr/bin/shutdown "
-
-function shutdown() {
-    [[ $(echo "No\nYes" | dmenu -i -p "Do you want to shutdown ?") == "Yes" ]]  && echo "Shutting down"
-}
-
 #        _____ ___   ___  _     ____  
 #       |_   _/ _ \ / _ \| |   / ___| 
 #         | || | | | | | | |   \___ \ 

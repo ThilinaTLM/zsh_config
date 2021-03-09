@@ -3,7 +3,8 @@
 DIR_ROOT=/home/tlm/dotfiles/shell
 DIR_THEME=$DIR_ROOT/themes
 DIR_PLUGS=$DIR_ROOT/plugins
-DIR_SCRIPT=$DIR_ROOT/shcuts
+DIR_SHCUTS=$DIR_ROOT/shcuts
+DIR_SCRIPTS=$DIR_ROOT/scripts
 
 # Basic Configurations
 # HISTFILE="$HOME/.zsh_history"
@@ -24,13 +25,13 @@ bindkey  "^[[F"   end-of-line
 bindkey  "^[[3~"  delete-char
 
 # Global Variables
-# Yarn Globals
-export PATH="/home/tlm/.yarn/bin:$PATH"
+export PATH="/home/tlm/.yarn/bin:$PATH" # Yarn globals
+export PATH="$DIR_SCRIPTS:$PATH"        # Add scripts directory to path
 export EDITOR=/bin/nvim
 
 # Setup modules
 for f in $DIR_PLUGS/*.plugin.zsh; do source $f; done
-for f in $DIR_SCRIPT/*.zsh; do source $f; done
+for f in $DIR_SHCUTS/*.zsh; do source $f; done
 
 # Startup echo
 #$DIR_ROOT/pfetch

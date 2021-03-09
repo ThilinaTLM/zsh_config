@@ -1,0 +1,4 @@
+#!/bin/zsh
+
+[[ $(echo "No\nYes" | dmenu -i -p "Do you want to shutdown ?") == "Yes" ]]  && shutdown now
+
