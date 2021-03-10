@@ -1,3 +1,4 @@
 #!/bin/sh
 
-file=/tmp/$(hostname)_$(date "+%Y%m%d_%H%M%S").png; spectacle -bnro "${file}" && while ! [ -f "${file}" ]; do sleep 0.5; done && kdeconnect-cli -d $(kdeconnect-cli -a --id-only) --share "${file}"
+file=/tmp/$(hostname)_$(date "+%Y%m%d_%H%M%S").png; spectacle -bro "${file}" && while ! [ -f "${file}" ]; do sleep 0.5; done && kdeconnect-cli -d $(kdeconnect-cli -a --id-only) --share "${file}"
+
