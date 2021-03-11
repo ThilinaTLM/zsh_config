@@ -18,6 +18,9 @@ autoload -Uz compinit && compinit
 # Edit command in the editor
 autoload edit-command-line; zle -N edit-command-line
 
+# Expand aliases with TAB
+zstyle ':completion:*' completer _expand_alias _complete _ignored
+
 # HOME KEY and END KEY
 # allow HOME and END key to move
 bindkey  "^[[H"   beginning-of-line
