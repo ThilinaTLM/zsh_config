@@ -6,6 +6,9 @@
 #  \__,_|\___/ \__|_| |_|_|\___||___/
 #
 
-alias dtsh="cd ~/dotfiles/shell/"
-alias dtvim="cd ~/dotfiles/vim/"
-alias dtdwm="cd ~/dotfiles/dwm/"
+export ggsh=~/dotfiles/shell
+export ggvim=~/dotfiles/vim
+export ggdwm=~/dotfiles/dwm
+
+export gprog=~/Disk1/Programming
+export gstud=~/Disk1/Studies

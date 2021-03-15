@@ -3,7 +3,7 @@
 DIR_ROOT=/home/tlm/dotfiles/shell
 DIR_THEME=$DIR_ROOT/themes
 DIR_PLUGS=$DIR_ROOT/plugins
-DIR_SHCUTS=$DIR_ROOT/shcuts
+DIR_SHCUTS=$DIR_ROOT/aliases
 DIR_SCRIPTS=$DIR_ROOT/scripts
 
 # Basic Configurations

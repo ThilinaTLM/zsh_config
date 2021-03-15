@@ -1,4 +1,16 @@
 #!/bin/sh
 
-[[ $(echo -e "No\nYes" | dmenu -i -p "Do you want to shutdown ?") == "Yes" ]]  && shutdown now
+# "echo -e "No\nYes" | dmenu -i -p "Do you want to shutdown ?"
 
+PROMPT=$(echo -e "Cancel\nShutdown\nRestart\nLogout" | dmenu -i -p "Do you want to shutdown ?")
+
+if [[ $PROMPT == "Shutdown" ]]; then
+    shutdown 
+elif [[ $PROMPT == "Restart" ]]; then
+    reboot 
+elif [[ $PROMPT == "Logout" ]]; then
+    echo "Logouting"
+    pkill dwm
+fi;
+
+# [[ $(echo -e "No\nYes" | dmenu -i -p "Do you want to shutdown ?") == "Yes" ]]  && shutdown now
