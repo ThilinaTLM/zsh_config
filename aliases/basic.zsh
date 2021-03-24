@@ -26,6 +26,9 @@ alias vim="nvim "
 # Laravel
 alias pa="php artisan "
 
+# MPV
+alias mpv-full="mpv --geometry=1366x768 "
+
 #         ___ _____ _   _ _____ ____  ____  
 #        / _ \_   _| | | | ____|  _ \/ ___| 
 #       | | | || | | |_| |  _| | |_) \___ \ 

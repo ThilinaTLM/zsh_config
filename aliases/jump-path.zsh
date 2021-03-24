@@ -10,5 +10,5 @@ export ggsh=~/dotfiles/shell
 export ggvim=~/dotfiles/vim
 export ggdwm=~/dotfiles/dwm
 
-export gprog=~/Disk1/Programming
-export gstud=~/Disk1/Studies
+export ggprog=~/Disk1/Programming
+export ggstud=~/Disk1/Studies

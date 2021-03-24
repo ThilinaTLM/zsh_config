@@ -2,15 +2,15 @@
 
 # "echo -e "No\nYes" | dmenu -i -p "Do you want to shutdown ?"
 
-PROMPT=$(echo -e "Cancel\nShutdown\nRestart\nLogout" | dmenu -i -p "Do you want to shutdown ?")
+PROMPT=$(echo "Cancel\nShutdown\nRestart\nLogout" | dmenu -i -p "Do you want to shutdown ?")
 
 if [[ $PROMPT == "Shutdown" ]]; then
-    shutdown 
+    shutdown now
 elif [[ $PROMPT == "Restart" ]]; then
     reboot 
 elif [[ $PROMPT == "Logout" ]]; then
     echo "Logouting"
-    pkill dwm
+    loginctl kill-session self
 fi;
 
 # [[ $(echo -e "No\nYes" | dmenu -i -p "Do you want to shutdown ?") == "Yes" ]]  && shutdown now

@@ -21,6 +21,16 @@ autoload edit-command-line; zle -N edit-command-line
 # Expand aliases with TAB
 zstyle ':completion:*' completer _expand_alias _complete _ignored
 
+# 0 -- vanilla completion (abc => abc)
+# 1 -- smart case completion (abc => Abc)
+# 2 -- word flex completion (abc => A-big-Car)
+# 3 -- full flex completion (abc => ABraCadabra)
+zstyle ':completion:*' matcher-list '' \
+  'm:{a-z\-}={A-Z\_}' \
+  'r:[^[:alpha:]]||[[:alpha:]]=** r:|=* m:{a-z\-}={A-Z\_}' \
+  'r:|?=** m:{a-z\-}={A-Z\_}'
+
+
 # HOME KEY and END KEY
 # allow HOME and END key to move
 bindkey  "^[[H"   beginning-of-line
@@ -29,7 +39,9 @@ bindkey  "^[[3~"  delete-char
 
 # Global Variables
 export PATH="/home/tlm/.yarn/bin:$PATH" # Yarn globals
-export PATH="$DIR_SCRIPTS:$PATH"        # Add scripts directory to path
+export PATH="$DIR_SCRIPTS:$PATH"        # Add scripts 
+export PATH="/home/tlm/.local/share/gem/ruby/2.7.0/bin:$PATH"
+# directory to path
 export EDITOR=/bin/nvim
 
 # Setup modules
