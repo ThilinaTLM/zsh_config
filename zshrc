@@ -37,6 +37,9 @@ bindkey  "^[[H"   beginning-of-line
 bindkey  "^[[F"   end-of-line
 bindkey  "^[[3~"  delete-char
 
+# VIM Mode
+bindkey -v
+
 # Global Variables
 export PATH="/home/tlm/.yarn/bin:$PATH" # Yarn globals
 export PATH="$DIR_SCRIPTS:$PATH"        # Add scripts 
