@@ -36,6 +36,25 @@ function _git_new_branch() {
     git checkout -b $1
 }
 
+# Git switch branch
+function _git_change_branch() {
+    LIST_MODE=""
+    while [[ $# -ge 1 ]];
+    do
+        opt="$1";
+        shift;              #expose next argument
+        case "$opt" in
+            "-r" )
+                LIST_MODE="-r"; 
+                ;;
+            "-a" )
+                LIST_MODE="-a"; 
+                ;;
+            *) echo "Invalid option: $@"; return 1;;
+       esac
+    done
+    git branch $LIST_MODE | sed 's/remotes\///g' | _select_branch 'checkout: ' | sed 's/\s\+//g' | sed 's/\*//g' | xargs git checkout
+}
 
 # git delete bulk
 function git-del-branches() {
@@ -80,7 +99,8 @@ alias gcb="git branch --show-current"
 alias gb="git branch -a | sed 's/remotes\///g' | _select_branch 'select: ' | sed 's/\s\+//g' | sed 's/\*//g'"
 
 # git checkout
-alias gc="git branch -a | sed 's/remotes\///g' | _select_branch 'checkout: ' | sed 's/\s\+//g' | sed 's/\*//g' | xargs git checkout"
+#alias gc="git branch -a | sed 's/remotes\///g' | _select_branch 'checkout: ' | sed 's/\s\+//g' | sed 's/\*//g' | xargs git checkout"
+alias gc="_git_change_branch "
 
 
 # Usage
@@ -90,5 +110,5 @@ alias gc="git branch -a | sed 's/remotes\///g' | _select_branch 'checkout: ' | s
 #       Create new branch from master branch and switch to it
 #   gcb <branch-name> .
 #       Create new branch from current branch and switch to it
-alias gnb="_git_new_branch "
+alias gnn="_git_new_branch "
 

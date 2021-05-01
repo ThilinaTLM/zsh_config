@@ -46,6 +46,10 @@ export PATH="$DIR_SCRIPTS:$PATH"        # Add scripts
 export PATH="/home/tlm/.local/share/gem/ruby/2.7.0/bin:$PATH"
 # directory to path
 export EDITOR=/bin/nvim
+export TERMINAL=st
+
+# FZF Commands
+export FZF_DEFAULT_COMMAND='ag --hidden --nocolor -g . --ignore node_modules --ignore .git --ignore .idea --ignore .vscode --ignore .ccls-cache'
 
 # Setup modules
 for f in $DIR_PLUGS/*.plugin.zsh; do source $f; done

@@ -13,12 +13,13 @@ alias stop="sudo systemctl stop "
 ## alternative system tools 
 # need to have bat,exa installed
 alias cat="bat --plain "
-alias ls="exa "
+alias ls="exa --icons "
 
 ## ViM
 # need to have neovim installed
-alias vim="nvim "
-alias v="nvim "
+alias vim="nnvim "
+alias v="nnvim "
+alias gvim="/opt/gnvim/target/release/gnvim --nvim /bin/nnvim "
 
 # MPV
 # staring mpv player with full screen
