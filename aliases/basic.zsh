@@ -17,9 +17,8 @@ alias ls="exa --icons "
 
 ## ViM
 # need to have neovim installed
-alias vim="nnvim "
-alias v="nnvim "
-alias gvim="/opt/gnvim/target/release/gnvim --nvim /bin/nnvim "
+alias vim="nvim "
+alias v="nvim "
 
 # MPV
 # staring mpv player with full screen
