@@ -14,6 +14,7 @@ alias stop="sudo systemctl stop "
 # need to have bat,exa installed
 alias cat="bat --plain "
 alias ls="exa --icons "
+alias ssh="kitty +kitten ssh"
 
 ## ViM
 # need to have neovim installed
