@@ -14,12 +14,12 @@ alias stop="sudo systemctl stop "
 # need to have bat,exa installed
 alias cat="bat --plain "
 alias ls="exa --icons "
-alias ssh="kitty +kitten ssh"
+# alias ssh="kitty +kitten ssh"
 
 ## ViM
 # need to have neovim installed
-alias vim="nvim "
-alias v="nvim "
+alias vim="lvim "
+alias v="lvim "
 
 # MPV
 # staring mpv player with full screen

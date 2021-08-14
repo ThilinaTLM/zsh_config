@@ -2,8 +2,8 @@
 # Customization
 # export TYPEWRITTEN_SYMBOL="$"
 export TYPEWRITTEN_SYMBOL="❯"
-export TYPEWRITTEN_PROMPT_LAYOUT="singleline"
-export TYPEWRITTEN_RIGHT_PROMPT_PREFIX="# "
+export TYPEWRITTEN_PROMPT_LAYOUT="singleline_verbose"
+# export TYPEWRITTEN_RIGHT_PROMPT_PREFIX="# "
 
 # Load theme
 fpath+=$DIR_THEME/typewritten

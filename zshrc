@@ -45,8 +45,8 @@ export PATH="/home/tlm/.yarn/bin:$PATH" # Yarn globals
 export PATH="$DIR_SCRIPTS:$PATH"        # Add scripts 
 export PATH="/home/tlm/.local/share/gem/ruby/2.7.0/bin:$PATH"
 # directory to path
-export EDITOR=/bin/nvim
-export TERMINAL=kitty
+export EDITOR=/usr/local/bin/lvim
+export TERMINAL=console
 export BROWSER=/bin/brave
 
 # FZF Commands
