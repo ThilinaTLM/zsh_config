@@ -10,7 +10,7 @@ DIR_SCRIPTS=$DIR_ROOT/scripts
 # HISTFILE="$HOME/.zsh_history"
 
 ## PS1 SHELL THEME
-source $DIR_THEME/theme.zsh-theme
+source $DIR_THEME/dracula/dracula.zsh-theme
 
 # Git autocomplete
 autoload -Uz compinit && compinit
@@ -45,9 +45,10 @@ export PATH="/home/tlm/.yarn/bin:$PATH" # Yarn globals
 export PATH="$DIR_SCRIPTS:$PATH"        # Add scripts 
 export PATH="/home/tlm/.local/share/gem/ruby/2.7.0/bin:$PATH"
 # directory to path
-export EDITOR=/usr/local/bin/lvim
+export EDITOR=/usr/bin/nvim
 export TERMINAL=console
 export BROWSER=/bin/brave
+export CHROME_EXECUTABLE="$BROWSER"
 
 # FZF Commands
 # export FZF_DEFAULT_COMMAND='ag --hidden --nocolor -g . --ignore node_modules --ignore .git --ignore .idea --ignore .vscode --ignore .ccls-cache'
@@ -57,4 +58,4 @@ for f in $DIR_PLUGS/*.plugin.zsh; do source $f; done
 for f in $DIR_SHCUTS/*.zsh; do source $f; done
 
 # Startup echo
-#$DIR_ROOT/pfetch
+$DIR_ROOT/pfetch
