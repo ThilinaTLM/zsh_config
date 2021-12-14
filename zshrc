@@ -58,4 +58,4 @@ for f in $DIR_PLUGS/*.plugin.zsh; do source $f; done
 for f in $DIR_SHCUTS/*.zsh; do source $f; done
 
 # Startup echo
-$DIR_ROOT/pfetch
+$DIR_SCRIPTS/pfetch
