@@ -50,9 +50,6 @@ export TERMINAL=console
 export BROWSER=/bin/brave
 export CHROME_EXECUTABLE="$BROWSER"
 
-# FZF Commands
-# export FZF_DEFAULT_COMMAND='ag --hidden --nocolor -g . --ignore node_modules --ignore .git --ignore .idea --ignore .vscode --ignore .ccls-cache'
-
 # Setup modules
 for f in $DIR_PLUGS/*.plugin.zsh; do source $f; done
 for f in $DIR_SHCUTS/*.zsh; do source $f; done
