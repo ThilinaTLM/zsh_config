@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# Activate Virtual Audio
+pactl load-module module-null-sink sink_name=VSpeaker sink_properties=device.description=VSpeaker
+pactl load-module module-remap-source source_name=RemapVSpeaker master=VSpeaker.monitor
+
