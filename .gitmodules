@@ -1,9 +1,0 @@
-[submodule "themes/spaceship-prompt"]
-	path = themes/spaceship-prompt
-	url = https://github.com/denysdovhan/spaceship-prompt.git
-[submodule "plugins/zsh-syntax-highlighting"]
-	path = plugins/zsh-syntax-highlighting
-	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
-[submodule "themes/typewritten"]
-	path = themes/typewritten
-	url = https://github.com/reobin/typewritten.git
