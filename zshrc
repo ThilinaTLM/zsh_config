@@ -1,6 +1,6 @@
 ## Directories
 #DIR_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-DIR_ROOT=/home/tlm/dotfiles/shell
+DIR_ROOT=/home/tlm/Work/zsh_config
 DIR_THEME=$DIR_ROOT/themes
 DIR_PLUGS=$DIR_ROOT/plugins
 DIR_SHCUTS=$DIR_ROOT/aliases
