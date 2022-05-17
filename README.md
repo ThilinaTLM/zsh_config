@@ -4,10 +4,10 @@
       | | | |   | |\/| |
       | | | |___| |  | |
       |_| |_____|_|  |_|
-    
+
     @ThilinaTLM
     @ZSH Configuration + Shell Scripts
-```                 
+```
 
 # Prerequisites
 
