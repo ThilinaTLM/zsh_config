@@ -1,6 +1,6 @@
 
 # Loading plugin
-source $DIR_PLUGS/history-substring-search/history-substring-search.zsh
+source ./plugins/history-substring-search/history-substring-search.plugin.zsh
 
 # Key bindings
 bindkey '^[[A' history-substring-search-up
