@@ -9,22 +9,21 @@
     @ZSH Configuration + Shell Scripts
 ```
 
-# Prerequisites
+# Dependencies
 
-### fzf
-Fuzzy File Finder
-used in many git related scripts
-[github >> repository]( https://github.com/junegunn/fzf )
+## Tools
 
-### exa
-A alternative tool for `ls`
-used in aliases/basic.zsh
-[github >> repository]( https://github.com/ogham/exa )
+Install prerequisites in fedora linux,
 
-### bat
-A alternative tool for `cat`
-used in aliases/basic.zsh
-[github >> repository]( https://github.com/sharkdp/bat )
+```bash 
+sudo dnf install fzf bat exa
+```
+
+## Prompt
+
+```bash
+curl -sS https://starship.rs/install.sh | sh
+```
 
 
 
