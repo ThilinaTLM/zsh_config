@@ -19,15 +19,20 @@ bindkey  "^[[3~"  delete-char
 # VIM Mode
 bindkey -v
 
-# Global Variables
-export PATH="/home/tlm/.yarn/bin:$PATH" # Yarn globals
-export PATH="/home/tlm/.local/share/gem/ruby/2.7.0/bin:$PATH"
 # directory to path
-export EDITOR=/usr/bin/nvim
-export TERMINAL=console
-export BROWSER=/bin/brave
-export CHROME_EXECUTABLE="$BROWSER"
 
 source ./git_alias.zsh
+source ./aliases.zsh
+source ./env_vars.zsh
+
+# source plugins 
+source "./plugins/compleat.plugin.zsh"
+source "./plugins/history-substring-search.plugin.zsh"
+source "./plugins/history.plugin.zsh"
+source "./plugins/lf.plugin.zsh"
+source "./plugins/zsh-suggest.plugin.zsh"
+source "./plugins/zsh-syntax-highlighting.plugin.zsh"
+source "./plugins/zsh-z.plugin.zsh"
+
 eval "$(starship init zsh)"
 
