@@ -15,6 +15,12 @@ bindkey  "^[[F"   end-of-line # end key
 bindkey  "^[[3~"  delete-char # delete key
 bindkey -v # enable VIM mode
 
+# ZSH preserve history across sessions
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=1000
+setopt SHARE_HISTORY
+
 # directory to path
 if [ -z "$ZSH_CONFIG_DIR" ]; then
   export ZSH_CONFIG_DIR="$HOME/.config/zsh"
