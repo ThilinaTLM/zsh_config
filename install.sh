@@ -67,12 +67,7 @@ function copy_starship_config() {
     echo "starship config is copied to ~/.config/starship.toml"
 }
 
-read -p "Do you want to install zsh and starship prompt? [Y/n]" -n 1 -r 
-if [[ $REPLY =~ ^[Nn]$ ]]; then
-    echo ""
-    exit 1
-fi
-echo ""
+echo "Installing ZSH config..."
 
 resolve_requirements
 get_the_repo
