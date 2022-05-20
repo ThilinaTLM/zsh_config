@@ -1,7 +1,8 @@
 
+# edit-command-line
 autoload edit-command-line; zle -N edit-command-line
 
-# Autocomplete
+# zsh completion
 autoload -Uz compinit && compinit
 zstyle ':completion:*' completer _expand_alias _complete _ignored
 zstyle ':completion:*' matcher-list '' \
@@ -9,30 +10,20 @@ zstyle ':completion:*' matcher-list '' \
   'r:[^[:alpha:]]||[[:alpha:]]=** r:|=* m:{a-z\-}={A-Z\_}' \
   'r:|?=** m:{a-z\-}={A-Z\_}'
 
-
-# HOME KEY and END KEY
-# allow HOME and END key to move
-bindkey  "^[[H"   beginning-of-line
-bindkey  "^[[F"   end-of-line
-bindkey  "^[[3~"  delete-char
-
-# VIM Mode
-bindkey -v
+bindkey  "^[[H"   beginning-of-line # home key
+bindkey  "^[[F"   end-of-line # end key
+bindkey  "^[[3~"  delete-char # delete key
+bindkey -v # enable VIM mode
 
 # directory to path
+if [ -z "$ZSH_CONFIG_DIR" ]; then
+  export ZSH_CONFIG_DIR="$HOME/.config/zsh"
+fi
 
-source ./git_alias.zsh
-source ./aliases.zsh
-source ./env_vars.zsh
+source "$ZSH_CONFIG_DIR/basic.module.zsh"
+source "$ZSH_CONFIG_DIR/util.module.zsh"
+source "$ZSH_CONFIG_DIR/git.module.zsh"
 
-# source plugins 
-source "./plugins/compleat.plugin.zsh"
-source "./plugins/history-substring-search.plugin.zsh"
-source "./plugins/history.plugin.zsh"
-source "./plugins/lf.plugin.zsh"
-source "./plugins/zsh-suggest.plugin.zsh"
-source "./plugins/zsh-syntax-highlighting.plugin.zsh"
-source "./plugins/zsh-z.plugin.zsh"
-
+plug_source
 eval "$(starship init zsh)"
 
