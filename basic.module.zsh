@@ -1,4 +1,3 @@
-
 ## Aliases -------------------------------------------------------------
 
 # replace cat with bat
@@ -21,4 +20,10 @@ alias v="nvim "
 # if neovim exists, use it $(which nvim)
 if [ -x "$(which nvim)" ]; then
     export EDITOR="$(which nvim)"
+fi
+
+# kitty terminal 
+if [ $TERM = "xterm-kitty" ]; then
+    alias ssh="kitty +kitten ssh "
+    alias icat="kitty +kitten icat "
 fi

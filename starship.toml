@@ -89,3 +89,4 @@ min_time = 4
 
 [directory]
 home_symbol = "home"
+truncation_length = 1
