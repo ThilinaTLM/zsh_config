@@ -15,6 +15,9 @@ bindkey  "^[[F"   end-of-line # end key
 bindkey  "^[[3~"  delete-char # delete key
 bindkey -v # enable VIM mode
 
+bindkey "^[[A" history-beginning-search-backward
+bindkey "^[[B" history-beginning-search-forward
+
 # ZSH preserve history across sessions
 HISTFILE=~/.zsh_history
 HISTSIZE=10000

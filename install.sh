@@ -57,7 +57,6 @@ function install_starship_prompt() {
 function copy_starship_config() {
     echo "Copying starship config..."
     if [ -f ~/.config/starship.toml ] ; then
-        echo ""
         echo "starship config is already exists."
         cp ~/.config/starship.toml ~/.config/starship.toml.bak
         echo "backup the starship config to ~/.config/starship.toml.bak"
