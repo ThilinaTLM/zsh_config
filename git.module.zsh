@@ -31,7 +31,7 @@ function _git_new_branch() {
 
     # checkout to source branch
     git checkout $B_FROM 
-    
+
     # create the new branch and checkout
     git checkout -b $1
 }
@@ -95,7 +95,7 @@ alias gf="git fetch "
 alias gcb="git branch --show-current" 
 
 # select git branch
-# usage: git merge `gcb`
+# usage: git merge `gb`
 alias gb="git branch -a | sed 's/remotes\///g' | _select_branch 'select: ' | sed 's/\s\+//g' | sed 's/\*//g'"
 
 # git checkout
