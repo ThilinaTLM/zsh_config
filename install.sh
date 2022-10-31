@@ -1,40 +1,22 @@
 #!/bin/sh
 
-function resolve_requirements() {
-    # check git 
-    if ! which git > /dev/null; then
-        echo "git is not installed"
-        exit 1
-    fi
-
-    # check zsh 
-    if ! which zsh > /dev/null; then
-        echo "zsh is not installed"
-        exit 1
-    fi
-    
-    # create .config directory
-    if [ ! -d ~/.config ]; then
-        mkdir ~/.config
-    fi
-}
-
-function get_the_repo() {
+function download_zsh_config() {
     # clone the repo
-    echo "Cloning the repo..."
-    if [ -d ~/.dotfiles ]; then
-        echo ".config/zsh is already exits"
-        exit 0
+    if [ -d ~/.config/zsh ]; then
+        echo "'zsh' directory is already exits inside the ~/.config directory."
+        echo "Please backup and remove the directory before run the script."
+        exit 1
     fi
+    echo "Cloning the config files into ~/.config/zsh"
     git clone https://github.com/ThilinaTLM/zsh_config.git ~/.config/zsh --depth=1
-    echo ""
+    echo
 }
 
-function create_zshrc() {
+function generate_zshrc() {
     if [ -f ~/.zshrc ] ; then
-        echo "zshrc config is already exists."
+        echo "~/.zshrc config is already exists."
         cp ~/.zshrc ~/.zshrc.bak
-        echo "backup the zshrc config to ~/.zshrc.bak"
+        echo "Backuping the ~/.zshrc config to ~/.zshrc.bak"
     fi
 
     # generate .zshrc
@@ -45,32 +27,18 @@ autoload -Uz zshrc
 zshrc
 EOF
 
-    echo ".zshrc generated"
+    echo "~/.zshrc is generated"
     echo
 }
 
-function install_starship_prompt() {
-    echo "Installing starship prompt..."
-    curl -sS https://starship.rs/install.sh | sh
-}
-
-function copy_starship_config() {
-    echo "Copying starship config..."
-    if [ -f ~/.config/starship.toml ] ; then
-        echo "starship config is already exists."
-        cp ~/.config/starship.toml ~/.config/starship.toml.bak
-        echo "backup the starship config to ~/.config/starship.toml.bak"
-    fi
-
-    cp ./starship.toml ~/.config/starship.toml
-    echo "starship config is copied to ~/.config/starship.toml"
-}
 
 echo "Installing ZSH config..."
 
-resolve_requirements
-get_the_repo
-create_zshrc
-install_starship_prompt
-copy_starship_config
+# check zsh is installed
+if ! command -v zsh > /dev/null; then
+    echo "zsh is not installed"
+    exit 1
+fi
+
+
 

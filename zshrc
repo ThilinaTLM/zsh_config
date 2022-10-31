@@ -32,6 +32,7 @@ fi
 source "$ZSH_CONFIG_DIR/basic.module.zsh"
 source "$ZSH_CONFIG_DIR/util.module.zsh"
 source "$ZSH_CONFIG_DIR/git.module.zsh"
+source "$ZSH_CONFIG_DIR/jetbrains.module.zsh"
 
 plug_source
 eval "$(starship init zsh)"
