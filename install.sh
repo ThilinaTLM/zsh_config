@@ -59,15 +59,20 @@ download_zsh_config
 # generate .zshrc 
 generate_zshrc
 
+# copy starship.toml file
+if [ -f ~/.config/starship.toml ] ; then
+    echo "~/.config/starship.toml config is already exists."
+    cp ~/.config/starship.toml ~/.config/starship.toml.bak
+    echo "Backuping the ~/.config/starship.toml config to ~/.config/starship.toml.bak"
+fi
+echo "Copying the starship.toml config to ~/.config/starship.toml"
+cp ~/.config/zsh/starship.toml ~/.config/starship.toml
+echo ''
+
 # check zsh is default shell 
-if [ "$SHELL" != "$(command -v zsh)" ]; then
+if [ $(readlink -f "$SHELL") != "$(command -v zsh)" ]; then
     echo "zsh is not default shell."
     echo "run 'chsh -s $(command -v zsh)' to set zsh as default shell."
-    printf "Do you want to set zsh as default shell? [y/N]: "
-    read -r answer
-    if [ "$answer" = "y" ] || [ "$answer" = "Y" ]; then
-        chsh -s "$(command -v zsh)"
-    fi
 fi
 
 echo "Done."
