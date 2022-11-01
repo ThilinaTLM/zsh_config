@@ -75,4 +75,6 @@ if [ $(readlink -f "$SHELL") != "$(command -v zsh)" ]; then
     echo "run 'chsh -s $(command -v zsh)' to set zsh as default shell."
 fi
 
+echo "Run 'plug_install' to install the plugins."
+
 echo "Done."
