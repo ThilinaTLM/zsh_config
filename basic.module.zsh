@@ -8,7 +8,7 @@ fi
 
 # replace ls with exa
 if [ -x "$(which exa)" ]; then
-  alias ls="exa --icons -group-directories-first --color=always --time-style=long-iso "
+  alias ls="exa --icons --group-directories-first --color=always --time-style=long-iso "
 fi
 
 # alias for neovim 
