@@ -18,6 +18,9 @@ bindkey -v # enable VIM mode
 bindkey "^[[A" history-beginning-search-backward
 bindkey "^[[B" history-beginning-search-forward
 
+bindkey "^[[1;5C" forward-word # ctrl + right
+bindkey "^[[1;5D" backward-word # ctrl + left
+
 # ZSH preserve history across sessions
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
