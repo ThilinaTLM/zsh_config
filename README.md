@@ -9,7 +9,7 @@
     @ZSH Configuration + Shell Scripts
 ```
 
-# Dependencies
+# Prerequisites
 
 ## Tools
 
@@ -34,7 +34,14 @@ Make `zsh` is default shell,
 chsh -s $(command -v zsh)
 ```
 
-# Setup
+# Setup ZSH Configuration
+
+Single command installation,
+```bash
+curl -Ss https://raw.githubusercontent.com/ThilinaTLM/zsh_config/main/install.sh | zsh
+```
+
+> Use single command installation if it works
 
 Manual installation,
 ```bash
@@ -44,10 +51,6 @@ chmod +x ./install.sh
 ./install.sh
 ```
 
-Single command installation,
-```bash
-curl -Ss https://raw.githubusercontent.com/ThilinaTLM/zsh_config/main/install.sh | sh
-```
 
 
 
